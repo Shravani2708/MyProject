@@ -19,7 +19,7 @@ public class ProductDAOImpl implements ProductDAO {
 	@Autowired
     SessionFactory sessionFactory;
 
-	@Override
+	//@Override
 	public boolean addProduct(Product product) {
 		try
 		{
@@ -34,7 +34,7 @@ public class ProductDAOImpl implements ProductDAO {
 		
 	}
 
-	@Override
+	//@Override
 	public boolean updateProduct(Product product) {
 		
 		try
@@ -48,7 +48,7 @@ public class ProductDAOImpl implements ProductDAO {
 		}
 	}
 
-	@Override
+	//@Override
 	public boolean deleteProduct(Product product) {
 		
 		try
@@ -62,7 +62,7 @@ public class ProductDAOImpl implements ProductDAO {
 		}
 	}
 
-	@Override
+	//@Override
 	public Product getProduct(int productId) {
 		
 		try
@@ -77,7 +77,7 @@ public class ProductDAOImpl implements ProductDAO {
 		}
 	}
 
-	@Override
+	//@Override
 	public List<Product> listProduct() {
 		
 		try

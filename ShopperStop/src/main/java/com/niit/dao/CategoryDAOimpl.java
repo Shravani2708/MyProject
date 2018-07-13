@@ -20,7 +20,7 @@ public class CategoryDAOimpl implements CategoryDAO {
     @Autowired
     SessionFactory sessionFactory;
 
-	@Override
+	//@Override
 	public boolean addCategory(Category category) {
 		try
 		{
@@ -33,7 +33,7 @@ public class CategoryDAOimpl implements CategoryDAO {
 		}
 	}
 
-	@Override
+	//@Override
 	public boolean updateCategory(Category category) {
 		try
 		{
@@ -46,7 +46,7 @@ public class CategoryDAOimpl implements CategoryDAO {
 		}
 	}
 
-	@Override
+	//@Override
 	public boolean deleteCategory(Category category) {
 		try
 		{
@@ -60,7 +60,7 @@ public class CategoryDAOimpl implements CategoryDAO {
 		
 	}
 
-	@Override
+	//@Override
 	public Category getCategory(int categoryId) {
 		try
 		{
@@ -74,7 +74,7 @@ public class CategoryDAOimpl implements CategoryDAO {
 		}
 	}
 
-	@Override
+	//@Override
 	public List<Category> listCategories() {
 		try
 		{

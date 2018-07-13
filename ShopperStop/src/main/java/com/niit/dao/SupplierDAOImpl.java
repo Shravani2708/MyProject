@@ -20,7 +20,7 @@ public class SupplierDAOImpl implements SupplierDAO {
 	     @Autowired
 	    SessionFactory sessionFactory;
 
-		@Override
+		//@Override
 		public boolean addSupplier(Supplier supplier) {
 			try
 			{
@@ -33,7 +33,7 @@ public class SupplierDAOImpl implements SupplierDAO {
 			}
 		}
 
-		@Override
+		//@Override
 		public boolean updateSupplier(Supplier supplier) {
 			try
 			{
@@ -46,7 +46,7 @@ public class SupplierDAOImpl implements SupplierDAO {
 			}
 		}
 
-		@Override
+		//@Override
 		public boolean deleteSupplier(Supplier supplier) {
 			try
 			{
@@ -60,7 +60,7 @@ public class SupplierDAOImpl implements SupplierDAO {
 			
 		}
 
-		@Override
+		//@Override
 		public Supplier getSupplier(int supplierId) {
 			try
 			{
@@ -74,7 +74,7 @@ public class SupplierDAOImpl implements SupplierDAO {
 			}
 		}
 
-		@Override
+		//@Override
 		public List<Supplier> listSupplier() {
 			try
 			{
