@@ -63,8 +63,8 @@
    </tr>
 <tr>
 <td>
-         <a href ="<c:url value=’/deleteSupplier/${supplier.supplierId}’/>">Delete</a>
-          <a href ="<c:url value=’/editSupplier/${supplier.supplierId}’/>">Edit</a>
+         <a href ="<c:url value='/deleteSupplier/${supplier.supplierId}'/>">Delete</a>
+          <a href ="<c:url value='/editSupplier/${supplier.supplierId}'/>">Edit</a>
 </td>
 </tr>
 </c:forEach>

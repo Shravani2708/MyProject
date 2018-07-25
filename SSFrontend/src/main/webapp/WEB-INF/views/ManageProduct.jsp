@@ -2,14 +2,14 @@
     pageEncoding="ISO-8859-1"%>
      <%@include file="Header.jsp" %>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-    <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>>
+    <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
     
- <form:form action="ProductInsert" modelAttribute="product" method="post" enctype="multipart/form">
+ <form:form action="ProductInsert" modelAttribute="product" method="post" enctype="multipart/form-data">
  
- <table align="center" cellspacing="3">
+ <table align="center" cellspacing="3" class="table">
  
- <tr>
-     <td colspan="2">Product Manage</td>
+ <tr bgcolor="grey">
+     <td colspan="2"><center>Product Manage</center></td>
  </tr>
  
  <tr>
@@ -47,15 +47,20 @@
      <td> <form:input path="supplierId"/></td>
  </tr>
  
+  <tr>
+     <td>Product Image</td>
+     <td> <form:input path="file" path="pimage"/></td>
+ </tr>
+ 
  <tr>
      <td colspan="2">
-           <center><input type="submit" value="Save"/></center>
+           <center><input type="submit" value="Save" class="btn btn-info"/></center>
      </td>
   </tr>
 </table>
 </form:form>
 
-<table align:"center">
+<table align:"center" class="table-bordered">
          <tr bgcolor="pink">
           <td>Product ID</td> 
            <td>Product Name</td> 
