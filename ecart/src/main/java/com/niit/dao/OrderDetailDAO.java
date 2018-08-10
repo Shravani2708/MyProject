@@ -1,0 +1,11 @@
+package com.niit.dao;
+
+import com.niit.model.OrderDetail;
+
+public interface OrderDetailDAO {
+	
+	public boolean insertOrderDetail(OrderDetail orderDetail);
+	public boolean updateOrderDetail(String username);
+	public OrderDetail getOrderDetail(String username);
+	
+}

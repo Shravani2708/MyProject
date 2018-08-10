@@ -1,4 +1,4 @@
-<%-- <%--   <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+  <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
      <%@include file="Header.jsp" %>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -15,42 +15,46 @@
   
 </head> 
   <body background="images/bg16.jpg">
-  
-  <c:choose>  
-<c:when test="${flag}">
-  
-  <form action="/editProduct/{productData.productId}" modelAttribute="product" method="post" enctype="multipart/form-data"> 
-    
+  <c:url value='/ProductInsert/${product.productId}' var="addAction"></c:url>
+  <form:form action="${addAction}" commandName="product" method="post" role="form" enctype="multipart/form-data">
  
  <table align="center" cellspacing="3" class="table">
  
- <tr bgcolor="grey">
-     <td colspan="2"><center>Product Update</center></td>
+ <tr bgcolor="yellow">
+     <td colspan="2"><center>Product Manage</center></td>
  </tr>
- 
-  <tr>
-     <td>Product Id</td>
-    <td><input type="number" name="productId" value="${productData.productId}" readonly></td>
-      </tr>
-   <tr>
-     <td>Product Name</td>
-      <td><input type="text" name="productName" value="${productData.productId}" ></td>
- </tr>
+ <tr>
+ <td>Product Id</td>
 
+ <%-- <c:choose> --%>
+				<c:if test="${!empty product.productId}">
+
+					<td><form:input path="productId" disabled="true" readonly="true" /></td>
+				</c:if>
+				<%-- <c:otherwise>
+					<td><form:input path="productId" required="true"/></td>  
+				</c:otherwise>
+			</c:choose> --%>
+			</tr>
+ 
+ <tr>
+     <td>Product Name</td>
+     <td> <form:input path="productName"/></td>
+ </tr>
  
  <tr>
      <td>Product Description</td>
-     <td><input type="text" name="productDesc" value="${productData.productId}" ></td>
+     <td> <form:input path="productDesc"/></td>
  </tr>
  
  <tr>
      <td>Price</td>
-     <td><input type="text" name="price" value="${productData.productId}" ></td>
+     <td> <form:input path="price"/></td>
  </tr>
  
  <tr>
      <td>Stock</td>
-    <td><input type="text" name="stock" value="${productData.productId}" ></td>
+     <td> <form:input path="stock"/></td>
  </tr>
  
  <tr>
@@ -65,91 +69,29 @@
  
   <tr>
      <td>Supplier</td>
-     <td><input type="text" name="supplierId" value="${productData.productId}" ></td>
- </tr>
- 
-   <tr>
-     <td>Product Image</td>
-     <td> <form:input type="file" path="pimage"  value="${productData.productId}"/></td>
-    
- </tr> 
- 
- <tr>
-     <td colspan="2">
-           <center><input type="submit" name="Update" value="Update" class="btn btn-info"/></center>
-     </td>  
-  </tr>
-</table>
-</form>
-</c:when>
-
-<c:otherwise>
-<form action="<c:url value='/ProductInsert/{product.productId}'/>" modelAttribute="product" method="POST" enctype="multipart/form-data">
-  
-  
-    
- 
- <table align="center" cellspacing="3" class="table">
-  
- <tr bgcolor="grey">
-     <td colspan="2"><center>Product Manage</center></td>
+     <td> <form:input path="supplierId"/></td>
  </tr>
  
   <tr>
-     <td>Product Id</td>
-    <td><input type="number" name="productId" value="${product.productId}" readonly></td>
-      </tr>
-   <tr>
-     <td>Product Name</td>
-     <td><input type="text" name="productName" value="${product.productId}" ></td>
- </tr>
-
- 
- <tr>
-     <td>Product Description</td>
-     <td><input type="text" name="productDesc" value="${product.productId}" ></td>
- </tr>
- 
- <tr>
-     <td>Price</td>
-     <td><input type="text" name="price" value="${product.productId}" ></td>
- </tr>
- 
- <tr>
-     <td>Stock</td>
-      <td><input type="text" name="stock" value="${product.productId}" ></td>
- </tr>
- 
- <tr>
-     <td>Category</td>
-     <td>
-         <select path="categoryId">
-          <option value="0" label="--Select list--"/>
-         <options items="${categoryList}"/>
-         <select>
-      </td>   <!--  -->
- </tr>
- 
-  <tr>
-     <td>Supplier</td>
-     <td><input type="text" name="supplierId" value="${productData.productId}" ></td>
- </tr>
- 
-   <tr>
      <td>Product Image</td>
-     <td> <form:input type="file" path="pimage"  value="${productData.productId}"/></td>
-    
- </tr> 
+     <td> <form:input type="file" path="pimage"/></td>
+ </tr>
  
  <tr>
+    
      <td colspan="2">
-           <center><input type="submit" name="Add" value="Add" class="btn btn-info"/></center>
+           <center><input type="submit"  value="Save" class="btn btn-info"/></center>
      </td>
+     
+      <%-- <td>           <center><input type="submit" value="Update" class="btn btn-info"/></center>
+        <a input type="submit" "<c:url value='/updateProduct/${product.productId}' var="addAction" />" class="btn btn-info"></a> 
+               
+     </td> --%>
   </tr>
 </table>
-</form>
+</form:form>
   
-  
+ 
   
          
     
@@ -209,10 +151,8 @@
  
   
   
-  </c:otherwise>
-</c:choose> 
-  
+ 
   
  </body> 
  </html>
-         --%> --%>
+         

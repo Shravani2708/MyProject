@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
- <%@include file="Header.jsp" %>
+ 
  <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
   <html>
   <head>
@@ -10,6 +10,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
  </head>
   <body background="images/bg16.jpg">
+  <%@include file="Header.jsp" %>
   <section class="jumbotron text-center">
     <div class="container">
         <h1 class="jumbotron-heading">ShopperStop CART</h1>
@@ -25,7 +26,7 @@
                         <tr>
                             <th scope="col"> </th>
                             <th scope="col">Product</th>
-                            <th scope="col" class="text-center">Quantity</th>
+                            <th scope="col" class="number-center">Quantity</th>
                             <th scope="col">price </th>
                             <th scope="col">Total</th>
                              <th scope="col"></th>

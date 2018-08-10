@@ -21,7 +21,7 @@
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6 text-right">
                     <p>
-                        <em>Date: 2018-08-24 ${orderData.orderDate} </em>
+                        <em>Date: 2018-08-10 ${orderData.orderDate} </em>
                     </p>
                     <p>
                         <em>Order ID: ORD00525 ${orderData.orderId}</em>
@@ -57,7 +57,7 @@
      <th>${cartItem.quantity*cartItem.price}</th>
      
  </tr>
-</form>
+<%-- </form> --%>
 </c:forEach>
 </c:if>
                       <tr>

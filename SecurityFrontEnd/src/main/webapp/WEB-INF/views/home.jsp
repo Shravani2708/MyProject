@@ -25,8 +25,8 @@ html {
     font-family: "Lucida Sans", sans-serif;
 }
 .footer {
-    background-color: #0099cc;
-    color: #ffffff;
+    /* background-color: #0099cc;
+    color: #ffffff; */
     text-align: center;
     font-size: 12px;
     padding: 15px;
